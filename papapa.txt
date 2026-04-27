@@ -1,0 +1,24 @@
+import requests
+
+url = "https://7b4bdc8db3d7.ngrok-free.app/chat" 
+
+otazky = ["""vies mi este raz ukazat riesenie na to cvicenie 6?"""]
+for msg in otazky:
+    try:
+        r = requests.post(url, json={"prompt": msg}, timeout=40)
+        r.raise_for_status()
+        reply = r.json().get("response", "")
+        print(f"\n Help: {reply}")
+    except Exception as e:
+        print(f"\n Chyba pri otázke: {msg}\n{e}")
+
+gl
+
+***
+url = "https://raw.githubusercontent.com/Vendess/jdahelp/refs/heads/main/papapa.txt"
+response = requests.get(url)
+print(response.text)
+***
+
+// content.txt // papapa.txt // pareg.txt // paregm.txt // pars.txt // paba.txt // paknn.txt
+// paaprio.txt // paknnzhluk.txt // pahierzhluk.txt 
