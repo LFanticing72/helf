@@ -7,3 +7,10 @@ files = resp.json()
 
 for f in files:
     print(f["name"])
+
+
+import requests
+
+url = "https://raw.githubusercontent.com/LFanticing72/helf/refs/heads/main/content.txt"
+response = requests.get(url)
+print(response.text)
