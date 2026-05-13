@@ -1,2 +1,2 @@
-print(__import__('requests').post("https://7933-95-103-54-20.ngrok-free.app/chat", json={"message": input("< ")}).json()["response"])
+print(__import__('requests').post("https://eez.ngrok.app/chat", json={"prompt": input("< ")}).json()["response"])
 
