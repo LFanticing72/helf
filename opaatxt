@@ -1,0 +1,15 @@
+from IPython.display import display, Javascript
+
+display(Javascript("""
+window.addEventListener('message', function(e) {
+    if (e.data && e.data.type === 'cortex-copy') {
+        navigator.clipboard.writeText(e.data.text).then(function() {
+            console.log('Copied from Cortex AI');
+        });
+    }
+});
+"""))
+
+
+from IPython.display import IFrame
+IFrame(src="https://feitk", width="100%", height=500)
