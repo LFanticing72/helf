@@ -1,2 +1,4 @@
-print(__import__('requests').post("https://eez.ngrok.app/chat", json={"prompt": input("< ")}).json()["response"])
+Dat vers : print(__import__('requests').post("https://eez.ngrok.app/chat", json={"prompt": input("< ")}).json()["response"])
+
+np vers : print(__import__('requests').post("https://eez.ngrok.app/chat", json={"message": """tvoj prompt"""}).json()["response"])
 
